@@ -1,4 +1,4 @@
-##This code creates the second plot for Course Project 1
+##This code creates the third plot for Course Project 1
 
 ##Reading the data
 rawdata <- read.table("household_power_consumption.txt", sep=";", header = TRUE)
