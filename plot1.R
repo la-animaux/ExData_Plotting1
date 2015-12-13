@@ -9,6 +9,7 @@ remove(rawdata)
 powerCons$Date <- as.Date(powerCons$Date, "%d/%m/%Y")
 powerCons$DateTime <- paste(powerCons$Date, " ", powerCons$Time)
 powerCons$DateTime <- as.POSIXct(powerCons$DateTime)
+powerCons$Global_active_power <-as.numeric(as.character(powerCons$Global_active_power))
 
 ##Load the library
 library(datasets)
