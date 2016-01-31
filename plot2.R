@@ -19,7 +19,9 @@ xrange <- range(powerCons$DateTime)
 yrange <- range(powerCons$Global_active_power)
 
 ##Draw the line chart
+png(filename="plot2.png", width=480, height=480)
 plot(powerCons$Global_active_power, type="l", ylim=range(powerCons$Global_active_power), ann=T, xaxt='n', xlab=" ", ylab="Global active power (kilowatts)")
 axis(1, at=1, lab=c("Thu")) #label the x-axis
 axis(1, at=1439, lab=c("Fri")) #label the x-axis
 axis(1, at=2879, lab=c("Sat")) #label the x-axis
+dev.off()
