@@ -22,6 +22,8 @@ library(datasets)
 ##Set up the plot area
 par(mfrow = c(2, 2), oma = c(0, 0, 0, 0))
 
+png(filename="plot4.png", width=480, height=480)
+
 ##Draw plot 1
 xrange <- range(powerCons$DateTime) #Set the ranges for x axis
 yrange <- range(powerCons$Global_active_power) #Set the ranges for y axis
@@ -52,3 +54,5 @@ plot(powerCons$Global_reactive_power, type="l", ylim=range(powerCons$Global_reac
 axis(1, at=1, lab=c("Thu")) #label the x-axis
 axis(1, at=1439, lab=c("Fri")) #label the x-axis
 axis(1, at=2879, lab=c("Sat")) #label the x-axis
+
+dev.off()
