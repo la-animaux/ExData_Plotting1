@@ -15,5 +15,6 @@ powerCons$Global_active_power <-as.numeric(as.character(powerCons$Global_active_
 library(datasets)
 
 ##Draw the histogram
-powerCons$Global_active_power <-as.numeric(as.character(powerCons$Global_active_power))
+png(filename="plot1.png", width=480, height=480)
 with(powerCons, hist(Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)"))
+dev.off()
